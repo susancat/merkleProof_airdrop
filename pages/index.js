@@ -2,7 +2,7 @@ import keccak256 from "keccak256";
 import MerkleTree from "merkletreejs";
 
 export default function Home() {
-  const addresses = ["0x199E111e07C9cA1284b6B174Af7B2FDFb9fffcC9","0x91E81f56C9E156496423bc3b9DD2C38d402614b3","0xc28b02f9316E3D9c0BF7cfE14dbaBC6D67230E78","0x5b1c6f61cb65887C83512B859f67e62a626d9D84"];
+  const addresses = [""];
   const leaves = addresses.map(x => keccak256(x));
   const tree = new MerkleTree(leaves, keccak256, { sortPairs: true });
   //according to merkleProof.sol the pairs of leaves should be sorted
